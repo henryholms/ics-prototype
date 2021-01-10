@@ -1,0 +1,39 @@
+{% extends "layout.html" %}
+
+{% block pageTitle %}
+  Question page
+{% endblock %}
+
+{% block beforeContent %}
+  <a class="govuk-back-link" href="/start">Back</a>
+{% endblock %}
+
+{% block content %}
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+      <h1 class="govuk-heading-xl">Choose an Integrated Care System to compare it's performance to others:</h1>
+
+      <form class="form" action="/ICS_data" method="post">
+
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="ICS">
+            Choose the ICS you would like to compare:
+          </label>
+          <select class="govuk-select" id="ICS" name="ICS">
+            <option value="Frimley Health and Care">Frimley Health and Care</option>
+            <option value="Sussex" selected>Sussex</option>
+            <option value="Hertfordshire and West Essex">Hertfordshire and West Essex</option>
+            <option value="Norfolk and Waveney">Norfolk and Waveney</option>
+          </select>
+        </div>
+
+        <button class="govuk-button" data-module="govuk-button">Continue</button>
+
+      </form>
+
+    </div>
+  </div>
+
+{% endblock %}
